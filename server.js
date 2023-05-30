@@ -12,7 +12,11 @@ const httpc = createServer().listen(PORT, () => {
   console.log(`WebSocket server started on PORT ${PORT}`);
 });
 // Create a Socket.IO instance and attach it to the server
-const io = new Server (httpc);
+const io = new Server (httpc, {
+    cors: {
+      allowedHeaders: ["my-header"]
+    }
+  });
 
 io.on('connection', (socket) => {
   console.log(`Connected: ${socket.id}`);
