@@ -7,8 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon server.js --ext js --watch src --exec babel-node",
     "install:prod": "yarn install --freeze-lockfile",
-    "deploy": "NODE_ENV=production babel-node src/server.js",
-    "deploy-win": "set NODE_ENV=production&&babel-node src/server.js"
+    "deploy": "NODE_ENV=production babel-node server.js",
+    "deploy-win": "set NODE_ENV=production&&babel-node server.js"
   },
   "keywords": [],
   "author": "",
