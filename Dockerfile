@@ -7,6 +7,5 @@ WORKDIR /app
 
 RUN corepack enable
 RUN yarn install:prod
-RUN yarn build
 
 CMD ["yarn", "deploy"]
