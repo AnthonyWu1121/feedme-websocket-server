@@ -33,8 +33,8 @@ io.on('connection', (socket) => {
   socket.on('chat', (data) => {
     const { message, room } = data;
     console.log(`msg: ${message}, room: ${room}`);
-    io.emit('chat', message);
-    // io.to(room).emit('chat', message);
+    // io.emit('chat', message);
+    io.to(room).emit('chat', message);
   });
 
   socket.on('addlikecnt', (data) => {
